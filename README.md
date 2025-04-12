@@ -145,9 +145,6 @@ Os endpoints da aplicação podem ser facilmente importados no [Insomnia](https:
 2. Clique em **Application** (ou no menu principal) e selecione **Import/Export**.
 3. Escolha a opção **Import Data** e clique em **From File**.
 4. Selecione o arquivo `Insomnia_2025-04-12.yaml` localizado no diretório do projeto:
-   ```bash
-   /Users/alezzo/Documents/dev-projects/condominium-users-challenge/Insomnia_2025-04-12.yaml
-   ```
 5. Após a importação, os endpoints estarão disponíveis para uso no Insomnia.
 
 ---
