@@ -131,3 +131,38 @@ src/
 ```
 
 ---
+
+Aqui está a atualização sugerida para o README.md com as instruções sobre como importar os endpoints no Insomnia e exportar o relatório em Base64 para PDF:
+
+```markdown
+---
+
+## Importação de Endpoints no Insomnia
+
+Os endpoints da aplicação podem ser facilmente importados no [Insomnia](https://insomnia.rest/) para facilitar os testes. Para isso:
+
+1. Abra o Insomnia.
+2. Clique em **Application** (ou no menu principal) e selecione **Import/Export**.
+3. Escolha a opção **Import Data** e clique em **From File**.
+4. Selecione o arquivo `Insomnia_2025-04-12.yaml` localizado no diretório do projeto:
+   ```bash
+   /Users/alezzo/Documents/dev-projects/condominium-users-challenge/Insomnia_2025-04-12.yaml
+   ```
+5. Após a importação, os endpoints estarão disponíveis para uso no Insomnia.
+
+---
+
+## Exportar Relatório em Base64 para PDF
+
+Caso o relatório seja retornado em formato Base64, você pode convertê-lo para um arquivo PDF utilizando o seguinte comando no terminal:
+
+1. Copie o conteúdo Base64 retornado pela API.
+2. Execute o comando abaixo, substituindo `JVBERi0xLjcKJYGBg....` pelo conteúdo Base64:
+   ```bash
+   echo "JVBERi0xLjcKJYGBg...." | base64 --decode > boletos.pdf
+   ```
+3. O arquivo `boletos.pdf` será gerado no diretório atual.
+
+Agora você pode abrir o arquivo PDF com qualquer leitor de PDF para visualizar o relatório.
+
+---
