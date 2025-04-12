@@ -1,0 +1,140 @@
+type: collection.insomnia.rest/5.0
+name: park-condominiall
+meta:
+  id: wrk_740a12dfbd4147e2b00244ba0a6c4af2
+  created: 1744312040729
+  modified: 1744312040729
+collection:
+  - url: http://localhost:3000/boletos/import-csv
+    name: importt boleto
+    meta:
+      id: req_69938a94609b4337be01366cc2af2a4c
+      created: 1744312056748
+      modified: 1744420761273
+      isPrivate: false
+      sortKey: -1744312056748
+    method: POST
+    body:
+      mimeType: multipart/form-data
+      params:
+        - id: pair_c82320561c204f02877dda39e9e77658
+          name: file
+          disabled: false
+          type: file
+          fileName: /Users/alezzo/Documents/boleto-test-endpoint.csv
+    headers:
+      - name: Content-Type
+        value: multipart/form-data
+      - name: User-Agent
+        value: insomnia/10.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/boletos/process-pdf
+    name: Import PDF
+    meta:
+      id: req_07a68cf047c841ee993410c43f37dd0f
+      created: 1744425196164
+      modified: 1744432313218
+      isPrivate: false
+      sortKey: -1744425196164
+    method: POST
+    body:
+      mimeType: multipart/form-data
+      params:
+        - id: pair_bedbcc272311472a9dfd2d89f904ccca
+          name: file
+          disabled: false
+          type: file
+          fileName: /Users/alezzo/Documents/pdf_fake.pdf
+    headers:
+      - name: Content-Type
+        value: multipart/form-data
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/boletos/boletos
+    name: get all boleto
+    meta:
+      id: req_0ada941d96024297be34aee79bfe93bb
+      created: 1744431132527
+      modified: 1744431452691
+      isPrivate: false
+      sortKey: -1744431132527
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/boletos?nome=JOSE
+    name: get filter boleto
+    meta:
+      id: req_8131f7fe1eb7488f9fbd88fb9003b269
+      created: 1744431219416
+      modified: 1744434186199
+      isPrivate: false
+      sortKey: -1744431219416
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/boletos?relatorio=1
+    name: get pdf - base64
+    meta:
+      id: req_36cf990e04cc4b918eb17b0b9eca181b
+      created: 1744434657422
+      modified: 1744434687484
+      isPrivate: false
+      sortKey: -1744434657422
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_f86deacdecade3870e0859618149f905b343d1cb
+    created: 1744312040735
+    modified: 1744312040735
+environments:
+  name: Base Environment
+  meta:
+    id: env_f86deacdecade3870e0859618149f905b343d1cb
+    created: 1744312040734
+    modified: 1744312040734
+    isPrivate: false
