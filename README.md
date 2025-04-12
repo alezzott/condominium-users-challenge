@@ -69,7 +69,6 @@ curl -X GET "http://localhost:3000/boletos?nome=JOSE&relatorio=1"
 curl -X GET "http://localhost:3000/boletos?relatorio=1"
 ```
 
----
 
 ## PDF de Exemplo
 
@@ -80,8 +79,6 @@ src/assets/boletos_fake.pdf
 ```
 
 Este arquivo simula boletos com nomes fictícios, e pode ser usado para testar a extração de nomes e a separação de páginas.
-
----
 
 ## Configuração do Ambiente
 
@@ -134,12 +131,11 @@ src/
 
 Aqui está a atualização sugerida para o README.md com as instruções sobre como importar os endpoints no Insomnia e exportar o relatório em Base64 para PDF:
 
-```markdown
----
-
 ## Importação de Endpoints no Insomnia
 
-Os endpoints da aplicação podem ser facilmente importados no [Insomnia](https://insomnia.rest/) para facilitar os testes. Para isso:
+```
+
+Os endpoints da aplicação podem ser facilmente importados no Insonmia ou qualquer outro para facilitar os testes. Para isso:
 
 1. Abra o Insomnia.
 2. Clique em **Application** (ou no menu principal) e selecione **Import/Export**.
@@ -147,7 +143,8 @@ Os endpoints da aplicação podem ser facilmente importados no [Insomnia](https:
 4. Selecione o arquivo `Insomnia_2025-04-12.yaml` localizado no diretório do projeto:
 5. Após a importação, os endpoints estarão disponíveis para uso no Insomnia.
 
----
+
+```
 
 ## Exportar Relatório em Base64 para PDF
 
