@@ -3,21 +3,21 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Lotes', {
+    await queryInterface.createTable('lotes', {
       id: {
         type: Sequelize.INTEGER,
         primaryKey: true,
         autoIncrement: true,
       },
-      name: {
+      nome: {
         type: Sequelize.STRING(100),
         allowNull: false,
       },
-      active: {
+      ativo: {
         type: Sequelize.BOOLEAN,
         defaultValue: true,
       },
-      created_by: {
+      created_at: {
         type: Sequelize.DATE,
         defaultValue: Sequelize.NOW,
       },
@@ -25,6 +25,6 @@ module.exports = {
   },
 
   async down(queryInterface) {
-    await queryInterface.dropTable('Lotes');
+    await queryInterface.dropTable('lotes');
   },
 };
